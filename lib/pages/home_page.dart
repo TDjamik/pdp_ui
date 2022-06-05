@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pdp_ui/pages/sign_up_task_page.dart';
+import 'package:pdp_ui/pages/ui_page.dart';
+
+import 'login_ui_page.dart';
 
 class HomePage extends StatefulWidget {
   static const id = "/home_page";
@@ -15,29 +19,93 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "UI",
+          "Tasks Platform",
           style: TextStyle(
             color: Colors.white,
           ),
         ),
       ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-                "User",
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 40,
+        child: Column(
+          children: [
+            // # button for lesson1 task 1
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, UIPageTask.id);
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: const Text(
+                    "Module 5 Lesson 1 task 1",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ),
             ),
-            SizedBox(width: 10,),
-            Text(
-                "Interface",
-              style: TextStyle(
-                color: Colors.green,
-                fontSize: 40,
+
+            // # button for lesson 2 login
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, LogInPage.id);
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: const Text(
+                    "Login",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            // # button for lesson2 task 1
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, SignUpTask.id);
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: const Text(
+                    "Module 5 Lesson 2 task 1",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
