@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pdp_ui/pages/home_page.dart';
 import 'package:pdp_ui/pages/login_ui_page.dart';
 import 'package:pdp_ui/pages/sign_up_task_page.dart';
+import 'package:pdp_ui/pages/spotify_task_page.dart';
 import 'package:pdp_ui/pages/ui_page.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         UIPageTask.id: (context) => UIPageTask(),
         LogInPage.id: (context) => LogInPage(),
         SignUpTask.id: (context) => SignUpTask(),
+        SpotifyTask.id: (context) => SpotifyTask(),
       },
     );
   }

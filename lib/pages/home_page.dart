@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pdp_ui/pages/sign_up_task_page.dart';
+import 'package:pdp_ui/pages/spotify_task_page.dart';
 import 'package:pdp_ui/pages/ui_page.dart';
 
 import 'login_ui_page.dart';
@@ -99,6 +100,34 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child: const Text(
                     "Module 5 Lesson 2 task 1",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+
+            // # button for spotify task
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, SpotifyTask.id);
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: const Text(
+                    "Spotify task",
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
