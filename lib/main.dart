@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pdp_ui/pages/home_page.dart';
 import 'package:pdp_ui/pages/login_ui_page.dart';
+import 'package:pdp_ui/pages/shop_ui_page.dart';
+import 'package:pdp_ui/pages/shop_ui_task_page.dart';
 import 'package:pdp_ui/pages/sign_up_task_page.dart';
 import 'package:pdp_ui/pages/spotify_task_page.dart';
 import 'package:pdp_ui/pages/ui_page.dart';
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         LogInPage.id: (context) => LogInPage(),
         SignUpTask.id: (context) => SignUpTask(),
         SpotifyTask.id: (context) => SpotifyTask(),
+        ShopUi.id: (context) => ShopUi(),
+        ShopUiTask.id: (context) => ShopUiTask(),
       },
     );
   }
